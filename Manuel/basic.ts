@@ -58,7 +58,19 @@ function fullName(){
 
 fullName();
 
-setTimeout(fullName, 5000);
+function calc(sec: number = 0, min: number = 0, hour:number = 0){
+    let result: number = 0;
+    let milsec: number = sec;
+    let milmin: number = min;
+    let milh: number = hour;
+    milsec = sec * 1000;
+    if(min){milmin = min * 60 * 1000;}
+    if(hour){milh = hour * 60 * 60 * 1000;}
+    result = milsec + milmin + milh;
+    return result;
+}
+// console.log(calc(0,0,1));
+setTimeout(fullName, calc(5));
 
 
 // ex3

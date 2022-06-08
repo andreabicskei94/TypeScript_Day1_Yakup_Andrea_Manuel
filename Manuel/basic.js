@@ -54,7 +54,23 @@ function fullName() {
     });
 }
 fullName();
-setTimeout(fullName, 5000);
+function calc(sec = 0, min = 0, hour = 0) {
+    let result = 0;
+    let milsec = sec;
+    let milmin = min;
+    let milh = hour;
+    milsec = sec * 1000;
+    if (min) {
+        milmin = min * 60 * 1000;
+    }
+    if (hour) {
+        milh = hour * 60 * 60 * 1000;
+    }
+    result = milsec + milmin + milh;
+    return result;
+}
+// console.log(calc(0,0,1));
+setTimeout(fullName, calc(5));
 // ex3
 const names = ["serri", "manuel", "maria", "acilio"];
 for (let index in names) {

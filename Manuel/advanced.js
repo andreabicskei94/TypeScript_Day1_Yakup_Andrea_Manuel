@@ -33,6 +33,8 @@ const myArr = [{
         taste: 2
     }
 ];
+// myArr[myArr.length-1].taste = 3;
+// console.log(myArr[myArr.length-1]);
 function buildHTML(arr) {
     targetDiv.innerHTML = "";
     arr.forEach(function (e) {

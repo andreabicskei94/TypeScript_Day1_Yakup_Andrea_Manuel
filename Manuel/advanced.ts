@@ -33,6 +33,8 @@ const myArr: {dishName?: string, image?: string, description?:string, taste?: nu
         taste: 2
     }
 ]
+// myArr[myArr.length-1].taste = 3;
+// console.log(myArr[myArr.length-1]);
 
 function buildHTML(arr: any[]){
     targetDiv.innerHTML = "";
